@@ -7,7 +7,7 @@ DROP SCHEMA IF EXISTS RNASequenceSniffer;
 CREATE SCHEMA RNASequenceSniffer;
 # assume existence of user rnaSniffer
 # give user permissions
-GRANT SELECT, UPDATE, DELETE, INSERT ON RNASequenceSniffer.* TO 'rnaSniffer';
+GRANT SELECT, UPDATE, DELETE, INSERT ON RNASequenceSniffer.* TO 'rnaSniffer'@'localhost';
 # Start Creating tables
 # Create job table
 CREATE TABLE RNASequenceSniffer.Job
