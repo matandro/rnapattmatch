@@ -47,14 +47,16 @@ public class ImageProducer {
             System.out.println("Image producer, executing: " + fullRunningLine);
             int exitVal = p.waitFor();
             if (exitVal < 0)
-                throw new Exception();
+                throw new Exception("Sir_graph failed " + exitVal);
             p = Runtime.getRuntime().exec("convert " + tempFileName + ".ps " + tempFileName + ".jpg");
+            System.out.println("Convert, executing: " + "convert " + tempFileName + ".ps " + tempFileName + ".jpg");
             exitVal = p.waitFor();
             if (exitVal < 0)
-                throw new Exception();
+                throw new Exception("convert failed " + exitVal);
             imageName = tempFileName + ".jpg";
-        } catch (Exception ignore) {
+        } catch (Exception e) {
             imageName = null;
+            e.printStackTrace();
         } finally {
             if (tempCTFile != null) {
                 try {

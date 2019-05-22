@@ -12,7 +12,7 @@ import java.util.Map;
  */
 public class MailDispatcher {
     private static final String FROM_RNAPATTMATCH = "rnapattmatch@cs.bgu.ac.il";
-    private static final String SMTP_ADDRESS = "indigo@cs.bgu.ac.il";
+    private static final String SMTP_ADDRESS = "smtp.bgu.ac.il";
 
 
     public static boolean submissionMail(JobInformation jobInformation) {
