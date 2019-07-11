@@ -80,7 +80,7 @@ public class MailDispatcher {
         message.append("http://www.cs.bgu.ac.il/rnapattmatch/GetResults.jsp?jid=");
         message.append(jobInformation.getJobId());
         message.append("\nResults will be removed after a week.\n\nThis is an automatic e-mail, " +
-                "replays are ignored.\nHave a good day!\n");
+                "replays are ignored.\nHave a good day!\nBarash lab, Ben Gurion University\n");
         return sendMail(message.toString(), "RNAPattMatch confirmed submission, Query name: "
                 + jobInformation.getQueryName(), jobInformation.getEmail());
     }
@@ -127,7 +127,7 @@ public class MailDispatcher {
         message.append("http://www.cs.bgu.ac.il/rnapattmatch/GetResults.jsp?jid=");
         message.append(jobInformation.getJobId());
         message.append("\nResults will be removed after a week.\n\nThis is an automatic e-mail, " +
-                "replays are ignored.\nHave a good day!\n");
+                "replays are ignored.\nHave a good day!\nBarash lab, Ben Gurion University");
 
         return sendMail(message.toString(), "RNAPattMatch results are ready!, Query name: "
                 + jobInformation.getQueryName(), jobInformation.getEmail());
